@@ -1,5 +1,5 @@
-import {createStore} from "redux";
+import {combineReducers, createStore} from "redux";
 import {reducer} from "./reducer/reducer";
 
 
-export let store = createStore(reducer);
+export let store = createStore(combineReducers({reducer}));

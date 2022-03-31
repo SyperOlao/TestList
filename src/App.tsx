@@ -1,11 +1,11 @@
 import React from 'react';
 import './App.css';
-import {ContactPage} from "./Components/ContactPage";
+import ContactPage from "./Components/PostPage";
 
-function App() {
+function App(): JSX.Element {
   return (
     <div className="App">
-      <ContactPage/>
+        <ContactPage/>
     </div>
   );
 }

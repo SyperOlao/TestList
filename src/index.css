@@ -11,3 +11,35 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.container-post{
+
+}
+
+.container-post__elem{
+  text-decoration: none;
+  list-style-type: none;
+  width: 250px;
+  border-radius: 10px;
+  box-shadow: #6666 3px 10px 15px;
+
+}
+
+.container-post__title h1{
+  width: 100%;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid #6666;
+}
+
+.container-post__content{
+  padding: 10px;
+}
+
+.container-post__input{
+  width: 80%;
+  padding: 10px;
+  border-radius: 10px;
+}
