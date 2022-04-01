@@ -63,13 +63,9 @@ export function isEqual(object1: any, object2: any): boolean {
 
 
 export const deleteElement = (arr: IPost[], id: string) => {
-    let new_arr = []
-    for (const arrElem of arr) {
-        if (arrElem.id !== id) {
-            new_arr.push(arrElem);
-        }
-    }
-    return new_arr;
+    let newArr = arr.filter( (post) => post.id !== id )
+    localStorage.setItem('posts', JSON.stringify(newArr));
+    return newArr;
 }
 
 
@@ -82,7 +78,12 @@ export const addPost = (state: any) => {
             title: title,
             content: content,
         };
-        return {...state, posts: [...state.posts, temp], post: {title: '', content: ''}}
+        if(state.posts!==null) {
+            localStorage.setItem('posts', JSON.stringify([...state.posts, temp]));
+            return {...state, posts: [...state.posts, temp], post: {title: '', content: ''}}
+        }
+        localStorage.setItem('posts', JSON.stringify([temp]));
+        return {...state, posts: [temp], post: {title: '', content: ''}}
     }
     return state;
 }

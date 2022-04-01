@@ -6,7 +6,7 @@ let assert = require('assert');
 
 describe("Post:", ()=>{
     it("GeneratePost", ()=>{
-        console.log(generatePost(2));
+        console.log(generatePost(5));
         assert.equal(isEqual(generatePost(-10), []), true);
     });
 

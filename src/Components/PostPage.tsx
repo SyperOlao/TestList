@@ -9,10 +9,13 @@ const PostPage = (props: any): JSX.Element => {
     return (
         <div>
             <CreatePostElem />
-            <ul className={"container-post"}>
-                {props.posts.map((post: IPost, i: number)=>
-                <PostElem key={`${post.id}_${i}`} post={post}/>)}
-            </ul>
+
+            {props.posts !== null &&
+                <ul className={"container-post"}>
+                    {props.posts.map((post: IPost, i: number) =>
+                        <PostElem key={`${post.id}_${i}`} post={post}/>)}
+                </ul>
+            }
         </div>
     );
 }
