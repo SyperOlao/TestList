@@ -64,6 +64,10 @@ code {
 
 .create-post{
   margin: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
 
 .main-page{
@@ -76,4 +80,13 @@ code {
 .container-post__text{
   font-weight: bold;
   color: #282c34;
+}
+
+.create-posts__container-buttons{
+  align-self: flex-start;
+  padding: 20px;
+}
+.create-posts__buttons{
+  padding: 5px;
+  margin: 5px;
 }

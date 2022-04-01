@@ -24,6 +24,7 @@ const PostElem = (props: any): JSX.Element => {
 const mapDispatchToProps = {
     update: updateTitle,
     deleteCurrentPost: deletePost,
+
 }
 
 export default connect(null, mapDispatchToProps)(PostElem);
