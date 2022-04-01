@@ -4,14 +4,17 @@ import {addPost, updateField} from "../../store/action/actionCreator/actionCreat
 
 const CreatePostElem =  (props: any): JSX.Element => {
    let {title, content} = props.post
-    console.log(props.post)
+
     return (
         <li className={"container-post__elem"}>
+            <h1>Create post!</h1>
             <div className="container-post__title">
+                <span>title:</span>
                 <input className={"container-post__input"} onChange={(e)=>props.update(e)} name={'title'}
                        value={title}/>
             </div>
             <p className={"container-post__content"}>
+                <span>Content:</span>
                 <input className={"container-post__input"} onChange={(e)=>props.update(e)} name={'content'}
                        value={content}/>
             </p>

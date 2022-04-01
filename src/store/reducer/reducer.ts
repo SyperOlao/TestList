@@ -1,6 +1,5 @@
-import {addPost, deleteElement, generatePost} from "./utils";
+import {addPost, deleteElement} from "./utils";
 import {ADD_POST, DELETE_POST, UPDATE_FIELD, UPDATE_TITLE} from "../action/actionType";
-import {testData} from "./testData";
 import {IPost} from "../../Interfaces/IPost";
 
 const initialState = {

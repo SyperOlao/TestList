@@ -5,11 +5,11 @@ import {IPost} from "../Interfaces/IPost";
 import CreatePostElem from "./Post/CreatePostElem";
 
 const PostPage = (props: any): JSX.Element => {
-    console.log(props.posts);
     return (
-        <div>
+        <div className={'main-page'}>
+            <div className={'create-post'}>
             <CreatePostElem />
-
+                </div>
             {props.posts !== null &&
                 <ul className={"container-post"}>
                     {props.posts.map((post: IPost, i: number) =>

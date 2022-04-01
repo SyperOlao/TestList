@@ -13,7 +13,14 @@ code {
 }
 
 .container-post{
-
+  width: 100%;
+  padding: 30px;
+  background-color: #fefefe;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
 .container-post__elem{
@@ -24,7 +31,9 @@ code {
   box-shadow: #6666 3px 10px 15px;
 
 }
-
+.container-post__elem_position{
+  margin: 20px;
+}
 .container-post__title h1{
   width: 100%;
   font-size: 1.2rem;
@@ -49,4 +58,22 @@ code {
 
 .container-post__create{
   color: mediumspringgreen;
+  font-weight: bold;
+  padding: 5px;
+}
+
+.create-post{
+  margin: auto;
+}
+
+.main-page{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  flex-direction: column;
+}
+.container-post__text{
+  font-weight: bold;
+  color: #282c34;
 }
