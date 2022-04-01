@@ -43,3 +43,6 @@ code {
   padding: 10px;
   border-radius: 10px;
 }
+.container-post__delete{
+  color: red;
+}

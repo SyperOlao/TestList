@@ -1,14 +1,15 @@
 import React from "react"
 import {connect} from "react-redux";
-import {PostElem} from "./Post/PostElem";
+import PostElem from "./Post/PostElem";
 import {IPost} from "../Interfaces/IPost";
 
 const PostPage = (props: any): JSX.Element => {
+    console.log(props.posts);
     return (
         <div>
             <ul className={"container-post"}>
                 {props.posts.map((post: IPost, i: number)=>
-                <PostElem key={`${post.title}_${i}`} post={post}/>)}
+                <PostElem key={`${post.id}_${i}`} post={post}/>)}
             </ul>
         </div>
     );

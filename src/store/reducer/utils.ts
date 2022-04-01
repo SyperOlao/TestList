@@ -1,5 +1,6 @@
 import {IPost} from "../../Interfaces/IPost";
 
+
 export function generatePost(amountOfPosts: number): IPost[] {
     let loremText = "Lorem ipsum dolor sit amet, consectetur adipiscing elit," +
         " sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." +
@@ -15,6 +16,7 @@ export function generatePost(amountOfPosts: number): IPost[] {
     if (amountOfPosts > 0) {
         for (let i = 0; i < amountOfPosts; i++) {
             resultPostArray[i] = {
+                id: uuid(),
                 title: generateString(splitLoremText, 3),
                 content: generateString(splitLoremText, 10)
             }
@@ -25,6 +27,13 @@ export function generatePost(amountOfPosts: number): IPost[] {
     return [];
 
 }
+
+const uuid = () =>
+    "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, function (c) {
+        var r = (Math.random() * 16) | 0,
+            v = c === "x" ? r : (r & 0x3) | 0x8;
+        return v.toString(16);
+    });
 
 function generateString(splitText: string[], stringLength: number): string {
     let resString = "";
