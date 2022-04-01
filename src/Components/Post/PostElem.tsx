@@ -1,6 +1,6 @@
 import React from "react";
 import {connect} from "react-redux";
-import {updateTitle} from "../../store/action/actionCreator/actionCreator";
+import {deletePost, updateTitle} from "../../store/action/actionCreator/actionCreator";
 
 
 const PostElem = (props: any): JSX.Element => {
@@ -11,7 +11,7 @@ const PostElem = (props: any): JSX.Element => {
             <div className="container-post__title">
                 <input className={"container-post__input"} onChange={(e)=>props.update(e, id)} name={'title'}
                        value={title}/>
-                <div className={"container-post__delete"}>Delete</div>
+                <div className={"container-post__delete"} onClick={()=>props.deleteCurrentPost(id)}>Delete</div>
             </div>
             <p className={"container-post__content"}>{content}</p>
 
@@ -21,6 +21,7 @@ const PostElem = (props: any): JSX.Element => {
 
 const mapDispatchToProps = {
     update: updateTitle,
+    deleteCurrentPost: deletePost,
 }
 
 export default connect(null, mapDispatchToProps)(PostElem);

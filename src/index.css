@@ -46,3 +46,7 @@ code {
 .container-post__delete{
   color: red;
 }
+
+.container-post__create{
+  color: mediumspringgreen;
+}

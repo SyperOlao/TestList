@@ -60,3 +60,29 @@ export function isEqual(object1: any, object2: any): boolean {
     }
     return true;
 }
+
+
+export const deleteElement = (arr: IPost[], id: string) => {
+    let new_arr = []
+    for (const arrElem of arr) {
+        if (arrElem.id !== id) {
+            new_arr.push(arrElem);
+        }
+    }
+    return new_arr;
+}
+
+
+export const addPost = (state: any) => {
+    let {title, content} = state.post;
+
+    if (title !== '' && title.trim()) {
+        let temp: IPost = {
+            id: uuid(),
+            title: title,
+            content: content,
+        };
+        return {...state, posts: [...state.posts, temp], post: {title: '', content: ''}}
+    }
+    return state;
+}
